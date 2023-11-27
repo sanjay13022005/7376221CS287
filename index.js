@@ -1,11 +1,6 @@
-const dbConfig = require("../config/db.config.js");
-
-const mongoose = require("mongoose");
-mongoose.Promise = global.Promise;
-
-const db = {};
-db.mongoose = mongoose;
-db.url = dbConfig.url;
-db.tutorials = require("./tutorial.model.js")(mongoose);
-
-module.exports = db;
+const express = require('express')
+const app = express()
+const PORT = 4000
+app.get('/',(req,res) =>
+     res.send('Hello World-7376221CS287-SANJAY G'))
+app.listen(PORT,() =>console.log('Example app listening at http://localhost:${PORT}'))
